@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+:root {
+  /* Light mode */
+  --color-bg: #fafafa;
+  --color-text: #414141;
+  --color-primary: #a100b9;
+  --color-accent: #d006ef;
+  --color-border: #746f6f;
+  --color-muted: #746f6f;
+  --color-gradient-primary: linear-gradient(
+    340deg,
+    var(--color-primary) 0%,
+    var(--color-text) 63%
+  );
+}
+
+[data-theme='dark'] {
+  --color-bg: #171717;
+  --color-text: #f0f0f0;
+  --color-primary: #a100b9;
+  --color-accent: #d006ef;
+  --color-border: #746f6f;
+  --color-muted: #9d939f;
+}
+
+@media (width < 576px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: bold;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+
+  p,
+  button,
+  ul,
+  li,
+  ol,
+  span,
+  a {
+    color: var(--color-text);
+  }
+}
+/* 
+#header {
+  background: var(--color-bg);
+} */
+
+.gradient-text {
+  background: linear-gradient(
+    340deg,
+    var(--color-primary) 0%,
+    var(--color-text) 63%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.glass-effect {
+  background: color-mix(in srgb, var(--color-bg) 30%, transparent);
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --color-bg: var(--color-bg);
+  --color-text: var(--color-text);
+  --color-primary: var(--color-primary);
+  --color-accent: var(--color-accent);
+  --color-border: var(--color-border);
+  --color-muted: var(--color-muted);
+  --color-gradient-primary: linear-gradient(
+    340deg,
+    var(--color-primary) 0%,
+    var(--color-text) 63%
+  );
+}
