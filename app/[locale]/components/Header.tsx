@@ -3,7 +3,7 @@
 import HeaderNav from './HeaderNav';
 import HeaderActions from './HeaderActions';
 import { useHeaderScroll } from '../hooks/useHeaderScroll';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 
 function Header() {
   const show = useHeaderScroll();
