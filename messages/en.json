@@ -1,7 +1,18 @@
 {
+  "nav": {
+    "list": {
+      "about": "About Me",
+      "features": "Features",
+      "benefits": "Benefits",
+      "skills": "Skills"
+    },
+
+    "contact": "Contact Me"
+  },
+
   "hero": {
     "title": "Build Your End-to-End Website With a One Man Army. Zero Overhead Included",
-    "desc": "Launch your frontend, secure your backend, and deploy it all. Built with JavaScript, love, and me(the one-man army, no clapping required).",
+    "desc": "Launch your frontend, secure your backend, and deploy it all. Built with JavaScript technology(Node.js, Next.js, React.js, mongodb, postgres and more)",
     "cta": "See Benefits"
   }
 }

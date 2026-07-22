@@ -1,18 +1,20 @@
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Menu } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 const linkClassName =
   'relative block w-full pt-3 lg:pt-0 text-center transition-colors duration-300 hover:text-accent lg:inline-block lg:w-auto lg:px-1 lg:py-0.5 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:after:scale-x-100';
 
 const navLinks = [
-  { label: 'Benefits', href: '/benefits' },
-  { label: 'Features', href: '/features' },
-  { label: 'Skills', href: '/skills' },
-  { label: 'About Me', href: '/about-me' },
+  { label: 'benefits', href: '/benefits' },
+  { label: 'features', href: '/features' },
+  { label: 'skills', href: '/skills' },
+  { label: 'about', href: '/about-me' },
 ];
 
 function HeaderNav() {
+  const t = useTranslations('nav');
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -42,13 +44,13 @@ function HeaderNav() {
         {navLinks.map((link) => (
           <li key={link.href} className="w-full lg:w-auto">
             <Link className={linkClassName} href={link.href}>
-              {link.label}
+              {t(`list.${link.label}`)}
             </Link>
           </li>
         ))}
         <li className="w-full lg:hidden lg:w-auto">
           <Link className={linkClassName} href={'#contact'}>
-            Contact Me
+            {t('contact')}
           </Link>
         </li>
       </ul>
