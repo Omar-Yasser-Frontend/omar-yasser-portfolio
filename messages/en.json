@@ -12,7 +12,25 @@
 
   "hero": {
     "title": "Build Your End-to-End Website With a One Man Army. Zero Overhead Included",
-    "desc": "Launch your frontend, secure your backend, and deploy it all. Built with JavaScript technology(Node.js, Next.js, React.js, mongodb, postgres and more)",
+    "desc": "Launch your frontend, secure your backend, and deploy it all — using a modern JavaScript stack",
     "cta": "See Benefits"
+  },
+
+  "benefits": {
+    "heading": "Benefits",
+    "desc": "Everything I handle to turn your idea into a working product",
+
+    "frontend": {
+      "heading": "Frontend",
+      "desc": "Responsive UI, API integration, state management, forms, authentication and payment flows <guidelines>Read More</guidelines>"
+    },
+    "backend": {
+      "heading": "Backend",
+      "desc": "Database design, business logic, authentication, authorization, payment integration and third-party services <guidelines>Read More</guidelines>"
+    },
+    "cloud": {
+      "heading": "Cloud and Deploy",
+      "desc": "Deploying applications to PaaS or VPS, configuring SSL, environment variables and secure server access <guidelines>Read More</guidelines>"
+    }
   }
 }
