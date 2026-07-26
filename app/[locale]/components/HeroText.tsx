@@ -10,7 +10,7 @@ function HeroText() {
         {t('title')}
       </h1>
       <hr className="text-primary mx-auto w-1/2 max-w-full lg:mx-0 lg:w-10" />
-      <p className="text-muted text-sm">{t('desc')}</p>
+      <p className="text-muted text-sm leading-relaxed">{t('desc')}</p>
       <PrimaryBtn className="mx-auto inline-block w-fit lg:mx-0">
         {t('cta')}
       </PrimaryBtn>
