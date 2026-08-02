@@ -2,11 +2,14 @@ import Container from './Container';
 
 interface SectionType {
   children: React.ReactNode;
+  className?: string;
 }
 
-function Section({ children }: SectionType) {
+function Section({ children, className }: SectionType) {
   return (
-    <section className="border-border border-t py-10 lg:py-20">
+    <section
+      className={`border-border min-h-screen border-t py-10 lg:py-20 ${className ? className : ''}`}
+    >
       {children}
     </section>
   );
@@ -18,7 +21,9 @@ Section.Container = Container;
 
 Section.HeadingWrapper = function HeadingWrapper({ children }: SectionType) {
   return (
-    <hgroup className="flex flex-col gap-6 text-center mb-10">{children}</hgroup>
+    <hgroup className="mb-10 flex flex-col gap-6 text-center">
+      {children}
+    </hgroup>
   );
 };
 

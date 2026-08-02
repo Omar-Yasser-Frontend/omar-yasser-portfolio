@@ -1,14 +1,14 @@
 'use client';
 
-import { useRouter, usePathname } from '@/i18n/navigation'; // Fixed import
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
 import { useTransition } from 'react';
 
-function ToggleLang() {
-  const router = useRouter();
-  const pathname = usePathname(); // Now safely returns paths without the prefix (e.g. "/about" instead of "/en/about")
-  const locale = useLocale();
+export default function ToggleLang() {
   const [isPending, startTransition] = useTransition();
+  const router = useRouter();
+  const locale = useLocale();
+  const pathname = usePathname();
 
   const handleLanguageChange = (nextLocale: string) => {
     startTransition(() => {
@@ -17,18 +17,14 @@ function ToggleLang() {
   };
 
   return (
-    <div className="fixed right-4 bottom-4">
-      <select
-        className="text-text bg-bg p-2 border-border border rounded-sm"
-        disabled={isPending}
-        defaultValue={locale}
-        onChange={(e) => handleLanguageChange(e.target.value)}
-      >
-        <option value="en">English</option>
-        <option value="ar">Arabic</option>
-      </select>
-    </div>
+    <select
+      disabled={isPending}
+      className="bg-bg border-border fixed right-4 bottom-4 z-50 rounded-sm border p-3"
+      value={locale}
+      onChange={(e) => handleLanguageChange(e.target.value)}
+    >
+      <option value="en">English</option>
+      <option value="ar">Arabic</option>
+    </select>
   );
 }
-
-export default ToggleLang;
