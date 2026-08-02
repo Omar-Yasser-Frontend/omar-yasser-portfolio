@@ -22,15 +22,35 @@
 
     "frontend": {
       "heading": "Frontend",
-      "desc": "Responsive UI, API integration, state management, forms, authentication and payment flows <guidelines>Read More</guidelines>"
+      "desc": "Responsive interfaces, smooth user interactions, secure authentication, payment flows, and integrations with external services <guidelines>Read More</guidelines>"
     },
     "backend": {
       "heading": "Backend",
-      "desc": "Database design, business logic, authentication, authorization, payment integration and third-party services <guidelines>Read More</guidelines>"
+      "desc": "Reliable business logic, secure authentication, payment integration, database design, and third-party services <guidelines>Read More</guidelines>"
     },
     "cloud": {
       "heading": "Cloud and Deploy",
       "desc": "Deploying applications to PaaS or VPS, configuring SSL, environment variables and secure server access <guidelines>Read More</guidelines>"
+    }
+  },
+
+  "features": {
+    "heading": "Features",
+    "desc": "how i deliver my service",
+
+    "frontend": {
+      "heading": "Website Development Process",
+      "desc": "SEO-friendly websites built with Next.js, interactive user experiences powered by React, and seamless API integrations, all backed by clean, scalable JavaScript <guidelines>Read More</guidelines>"
+    },
+
+    "backend": {
+      "heading": "Server & Databases",
+      "desc": "REST APIs built with Node.js and Express, backed by PostgreSQL for structured data and MongoDB for document-based storage <guidelines>Read More</guidelines>"
+    },
+
+    "cloud": {
+      "heading": "infrastructure & Hosting",
+      "desc": "Deploying applications to PaaS platforms or your preferred VPS provider, configuring Nginx, SSL certificates with Let's Encrypt, environment variables, and Dockerized deployments <guidelines>Read More</guidelines>"
     }
   }
 }
