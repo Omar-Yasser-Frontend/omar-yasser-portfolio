@@ -16,7 +16,7 @@ function Header() {
       id="header"
     >
       <div className="container mx-auto grid grid-cols-[1fr_auto_auto] items-center gap-4 px-4 py-6 shadow lg:grid-cols-[auto_1fr_auto]">
-        <h2>
+        <h2 className='en-mono'>
           <Link
             href="/"
             className="gradient-text text-2xl font-extrabold whitespace-nowrap"

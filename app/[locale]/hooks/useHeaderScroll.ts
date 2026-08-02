@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const SCROLL_THRESHOLD = 100;
+const SCROLL_THRESHOLD = 150;
 
 export function useHeaderScroll() {
   const lastScrollY = useRef(0);
